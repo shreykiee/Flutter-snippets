@@ -10,10 +10,13 @@
           duration: const Duration(seconds: 5),
           content: const Text('expense deleted'),
           action: SnackBarAction(
-              label: 'Undo',
-              onPressed: () => setState(() {
-                    _registeredExpenses.insert(expenseIndex, expense);
-                  })),
+            label: 'Undo',
+            onPressed: () => setState(
+              () {
+                _registeredExpenses.insert(expenseIndex, expense);
+              },
+            ),
+          ),
         ),
       );
     });
